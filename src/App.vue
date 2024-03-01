@@ -1,5 +1,6 @@
 <script>
 import AppNav from './components/AppNav.vue';
+import AppFooter from './components/AppFooter.vue';
 export default {
 
   data() {
@@ -8,6 +9,7 @@ export default {
 
   components: {
     AppNav,
+    AppFooter
   },
 
 }
@@ -17,7 +19,7 @@ export default {
 <template>
   <AppNav></AppNav>
 
-
+  <AppFooter></AppFooter>
 </template>
 
 
