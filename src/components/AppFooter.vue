@@ -1,6 +1,12 @@
 <script>
+import BlueLinks from './BlueLinks.vue';
+
 export default {
     name: 'AppFooter',
+
+    components: {
+        BlueLinks
+    },
 
     data() {
         return {
@@ -53,6 +59,7 @@ export default {
 <template>
 
     <footer>
+        <BlueLinks></BlueLinks>
         <div class="footer-top">
             <div class="container">
 
