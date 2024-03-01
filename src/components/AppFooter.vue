@@ -21,30 +21,30 @@ export default {
                         title: 'sites',
                         links:['DC', 'MAD Magazine', 'DC Kids', 'DC Universe', 'DC Power Visa']
                     },
-                ],
+            ],
 
-                socials: [
-                    {
-                        name: 'facebook',
-                        icon: '/img/footer-facebook.png'
-                    },
-                    {
-                        name: 'twitter',
-                        icon: '/img/footer-twitter.png'
-                    },
-                    {
-                        name: 'youtube',
-                        icon: '/img/footer-youtube.png'
-                    },
-                    {
-                        name: 'pinterest',
-                        icon: '/img/footer-pinterest.png'
-                    },
-                    {
-                        name: 'periscope',
-                        icon: '/img/footer-periscope.png'
-                    },
-                ]
+            socials: [
+                {
+                    name: 'facebook',
+                    icon: '/img/footer-facebook.png'
+                },
+                {
+                    name: 'twitter',
+                    icon: '/img/footer-twitter.png'
+                },
+                {
+                    name: 'youtube',
+                    icon: '/img/footer-youtube.png'
+                },
+                {
+                    name: 'pinterest',
+                    icon: '/img/footer-pinterest.png'
+                },
+                {
+                    name: 'periscope',
+                    icon: '/img/footer-periscope.png'
+                },
+            ]
         }
     }
 }
@@ -74,12 +74,35 @@ export default {
 
             </div>
         </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+
+                <div class="cta">
+                    <button class="btn">
+                        Sign-up now!
+                    </button>
+                </div>
+
+                <div class="social-links">
+                    <strong>Follow Us</strong>
+                    <ul>
+                        <li v-for="currentSocial in socials">
+                            <img :src="currentSocial.icon" :alt="currentSocial.name">
+                        </li>
+                        
+                    </ul>
+                </div>
+
+            </div>
+        </div>
     </footer>
 
 </template>
 
 <style lang="scss">
 @use '../styles/general' as *;
+@use '../styles/variables' as *;
 
 
 footer {
@@ -104,30 +127,66 @@ footer {
 
             height: 100%;
         }
+
+
+        .links {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: flex-start;
+            gap: 20px 30px;
+
+            height: 100%;
+
+            padding: 20px 0;
+
+            h4 {
+                text-transform: uppercase;
+                font-size: 1.5em;
+                font-family: 'Barlow Condensed', sans-serif;
+
+                margin-bottom: 10px;
+            }
+
+            ul {
+                color: #ccc;
+                font-size: .9em;
+            }
+        }
     }
 
-    .links {
-        display: flex;
-        flex-flow: column wrap;
-        align-content: flex-start;
-        gap: 20px 30px;
-
-        height: 100%;
-
+    .footer-bottom {
         padding: 20px 0;
+        background-color: #303030;
 
-        h4 {
+        .btn {
+            padding: 14px 18px;
             text-transform: uppercase;
-            font-size: 1.5em;
-            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: bold;
+            font-size: 1em;
 
-            margin-bottom: 10px;
+            background-color: transparent;
+            border: solid 1px $primary;
         }
 
-        ul {
-            color: #ccc;
-            font-size: .9em;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            
+            .social-links, ul {
+                display: flex;
+                align-items: center;
+                gap: 18px;
+
+                strong {
+                    color: $primary;
+                    text-transform: uppercase;
+                    font-family: 'Barlow Condensed', sans-serif;
+                    font-size: 1.3em;
+                }
+            }
         }
     }
+
+    
 }
 </style>

@@ -36,6 +36,7 @@ export default {
 
 <style lang="scss">
 @use '../styles/general' as *;
+@use '../styles/variables' as *;
 
 nav {
     background-color: white;
@@ -85,7 +86,7 @@ nav {
                 
                 width: 100%;
                 height: 6px;
-                background-color: #0282f9;
+                background-color: $primary;
             }
         }
         
