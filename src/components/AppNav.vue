@@ -1,6 +1,16 @@
 <script>
 export default {
     name: 'AppNav',
+
+    data() {
+        return {
+            links: [
+                'Characters', 'Comics', 'Movies', 'TV', 'Games', 'Collectibles', 'Videos', 'Fans', 'News', 'Shop'
+            ],
+
+            activeLinkIndex: 1,
+        }
+    }
 }
 </script>
 
@@ -14,10 +24,10 @@ export default {
             
 
             <ul class="links">
-                    <li>Characters</li>
-                    <li class="active">Comics</li>
-                    <li>Movies</li>
-                    <li>TV</li>
+                <li 
+                    v-for="(link, index) in links"
+                    :class="index == activeLinkIndex ? 'active' : ''"
+                >{{link}}</li>
             </ul>
         </div>
     </nav>
@@ -32,6 +42,8 @@ nav {
     color: black;
 
     height: 120px;
+
+    font-family: 'Barlow Condensed', sans-serif;
 
     .container {
         display: flex; 
@@ -48,7 +60,7 @@ nav {
     ul.links {
         display: flex;
         align-items: stretch;
-        gap: 50px;
+        gap: 30px;
 
         height: 100%;
 
