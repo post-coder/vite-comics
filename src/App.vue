@@ -1,6 +1,8 @@
 <script>
 import AppNav from './components/AppNav.vue';
 import AppFooter from './components/AppFooter.vue';
+import AppJumbo from './components/AppJumbo.vue';
+
 export default {
 
   data() {
@@ -9,7 +11,8 @@ export default {
 
   components: {
     AppNav,
-    AppFooter
+    AppFooter,
+    AppJumbo
   },
 
 }
@@ -18,6 +21,8 @@ export default {
 
 <template>
   <AppNav></AppNav>
+
+  <AppJumbo></AppJumbo>
 
   <AppFooter></AppFooter>
 </template>
