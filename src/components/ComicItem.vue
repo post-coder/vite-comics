@@ -4,8 +4,7 @@ export default {
     name: 'ComicItem',
 
     props: {
-        coverSrc: String,
-        title: String,
+        comic: Object,
     },
 }
 
@@ -15,10 +14,10 @@ export default {
 
 <div class="comic">
 
-    <img :src="coverSrc" alt="Action Comics" class="comic-cover">
+    <img :src="comic.thumb" alt="Action Comics" class="comic-cover">
 
     <span class="comic-title">
-        {{ title }}
+        {{ comic.series }}
     </span>
 
 </div>
