@@ -105,7 +105,11 @@ export default {
     
         <div id="comics-list">
             
-            <ComicItem v-for="comic in comics"></ComicItem>
+            <ComicItem 
+                v-for="comic in comics"
+                :title="comic.series"
+                :coverSrc="comic.thumb"
+            ></ComicItem>
 
         </div>
 

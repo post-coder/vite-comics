@@ -3,6 +3,10 @@
 export default {
     name: 'ComicItem',
 
+    props: {
+        coverSrc: String,
+        title: String,
+    },
 }
 
 </script>
@@ -11,10 +15,10 @@ export default {
 
 <div class="comic">
 
-    <img src="https://www.coverbrowser.com/image/action-comics/1-1.jpg" alt="Action Comics" class="comic-cover">
+    <img :src="coverSrc" alt="Action Comics" class="comic-cover">
 
     <span class="comic-title">
-        Action Comics
+        {{ title }}
     </span>
 
 </div>
