@@ -1,5 +1,7 @@
+@use './variables' as *;
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -18,10 +20,39 @@
   padding: 0;
   box-sizing: border-box;
 }
-  
+ 
+
+
+
 
 .container {
   max-width: 1000px;
 
   margin: 0 auto;
+}
+
+
+h2 {
+  display: inline-block;
+  background-color: $primary; 
+
+  padding: 6px 24px;
+
+  text-transform: uppercase;
+  font-family: 'Barlow Condensed', sans-serif;
+
+  transform: translateY(-50%);
+
+}
+
+.btn.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+
+  padding: 8px 48px;
+
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-transform: uppercase;
 }

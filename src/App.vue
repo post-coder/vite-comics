@@ -2,6 +2,7 @@
 import AppNav from './components/AppNav.vue';
 import AppFooter from './components/AppFooter.vue';
 import AppJumbo from './components/AppJumbo.vue';
+import AppComics from './components/AppComics.vue';
 
 export default {
 
@@ -12,7 +13,8 @@ export default {
   components: {
     AppNav,
     AppFooter,
-    AppJumbo
+    AppJumbo,
+    AppComics
   },
 
 }
@@ -23,6 +25,9 @@ export default {
   <AppNav></AppNav>
 
   <AppJumbo></AppJumbo>
+
+  <AppComics></AppComics>
+  
 
   <AppFooter></AppFooter>
 </template>
